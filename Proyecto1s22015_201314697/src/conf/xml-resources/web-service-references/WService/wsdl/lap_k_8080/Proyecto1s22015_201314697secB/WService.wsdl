@@ -10,30 +10,40 @@
 <message name="operationResponse">
 <part name="parameters" element="tns:operationResponse"/>
 </message>
-<message name="hello">
-<part name="parameters" element="tns:hello"/>
-</message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse"/>
-</message>
 <message name="agregarBus">
 <part name="parameters" element="tns:agregarBus"/>
 </message>
 <message name="agregarBusResponse">
 <part name="parameters" element="tns:agregarBusResponse"/>
 </message>
+<message name="hello">
+<part name="parameters" element="tns:hello"/>
+</message>
+<message name="helloResponse">
+<part name="parameters" element="tns:helloResponse"/>
+</message>
+<message name="ListaArbol">
+<part name="parameters" element="tns:ListaArbol"/>
+</message>
+<message name="ListaArbolResponse">
+<part name="parameters" element="tns:ListaArbolResponse"/>
+</message>
 <portType name="WService">
 <operation name="operation">
 <input wsam:Action="http://beans.prueba.com/WService/operationRequest" message="tns:operation"/>
 <output wsam:Action="http://beans.prueba.com/WService/operationResponse" message="tns:operationResponse"/>
 </operation>
+<operation name="agregarBus">
+<input wsam:Action="http://beans.prueba.com/WService/agregarBusRequest" message="tns:agregarBus"/>
+<output wsam:Action="http://beans.prueba.com/WService/agregarBusResponse" message="tns:agregarBusResponse"/>
+</operation>
 <operation name="hello">
 <input wsam:Action="http://beans.prueba.com/WService/helloRequest" message="tns:hello"/>
 <output wsam:Action="http://beans.prueba.com/WService/helloResponse" message="tns:helloResponse"/>
 </operation>
-<operation name="agregarBus">
-<input wsam:Action="http://beans.prueba.com/WService/agregarBusRequest" message="tns:agregarBus"/>
-<output wsam:Action="http://beans.prueba.com/WService/agregarBusResponse" message="tns:agregarBusResponse"/>
+<operation name="ListaArbol">
+<input wsam:Action="http://beans.prueba.com/WService/ListaArbolRequest" message="tns:ListaArbol"/>
+<output wsam:Action="http://beans.prueba.com/WService/ListaArbolResponse" message="tns:ListaArbolResponse"/>
 </operation>
 </portType>
 <binding name="WServicePortBinding" type="tns:WService">
@@ -47,6 +57,15 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="agregarBus">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="hello">
 <soap:operation soapAction=""/>
 <input>
@@ -56,7 +75,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="agregarBus">
+<operation name="ListaArbol">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

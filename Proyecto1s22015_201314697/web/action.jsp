@@ -22,7 +22,7 @@
 	com.prueba.beans.WService_Service service = new com.prueba.beans.WService_Service();
 	com.prueba.beans.WService port = service.getWServicePort();
 	 // TODO initialize WS operation arguments here
-	java.lang.String bus = "20";
+	java.lang.String bus = user;
 	// TODO process result here
 	java.lang.String result = port.agregarBus(bus);
 	out.println("Result = "+result);

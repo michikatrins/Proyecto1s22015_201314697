@@ -41,7 +41,7 @@ body,td,th {
             <p>Nombre de la Estación:</p>
 			<p><input type="text" name="user" value=""></p>
 			<p>Contraseña:</p>
-			<p><input type="text" name="contra" value=""></p>
+			<p><input type="password" name="contra" value=""></p>
 			<p><input type="button" name="Agregar" value="Agregar"></p>
       </form>
       <div></div>

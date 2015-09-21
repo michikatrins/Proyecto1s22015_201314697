@@ -54,7 +54,7 @@ body,td,th {
 	java.lang.String bus = user;
 	// TODO process result here
 	java.lang.String result = port.agregarBus(bus);
-	out.println("Result = "+result);
+	out.println(" "+result);
         }
         } catch (Exception ex) {
 	// TODO handle custom exceptions here
