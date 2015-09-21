@@ -19,6 +19,10 @@ public class WService {
     /**
      * This is a sample web service operation
      */
+    
+    ListaDoblementeEnlazadaB list = new ListaDoblementeEnlazadaB();
+    ListaDoblementeEnlazadaL listaArbol = new ListaDoblementeEnlazadaL();
+    
     @WebMethod(operationName = "hello")
     public String hello(@WebParam(name = "name") String txt) {
         return "Hello " + txt + " !";
@@ -39,12 +43,20 @@ public class WService {
     @WebMethod(operationName = "agregarBus")
     public String agregarBus(@WebParam(name = "bus") String bus) {
         //TODO write your implementation code here:
-        ListaDoblementeEnlazadaB list = new ListaDoblementeEnlazadaB();
         list.agregarAlInicio(Integer.parseInt(bus));
+        list.mostrarListaInicioFin();
         
-        return list.buscar(Integer.parseInt(bus));
+        return "Agregado";
     }
 
-
-    
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "ListaArbol")
+    public String ListaArbol(@WebParam(name = "Nombre") String Nombre, @WebParam(name = "Contrase\u00f1a") String Contraseña) {
+        //TODO write your implementation code here:
+        listaArbol.insertar(Nombre, Contraseña, "Estacion Clave", 0);
+        listaArbol.mostrarListaInicioFin();
+        return "Agregado";
+    }
 }

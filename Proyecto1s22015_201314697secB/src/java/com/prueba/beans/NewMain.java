@@ -87,7 +87,7 @@ public class NewMain {
         ListaDoblementeEnlazadaL listaArbol = new ListaDoblementeEnlazadaL();
         
         listaArbol.insertar("Mario", "123", "Administrador", 12);
-        listaArbol.insertar("Daniel", "123", "Administrador", 13);
+        listaArbol.insertar("Daniel", "123","Administrador", 13);
         listaArbol.insertar("Juan", "123", "Administrador", 14);
         listaArbol.insertar("Goido", "123", "Administrador", 15);
         listaArbol.insertar("Serena", "123", "Administrador", 16);
